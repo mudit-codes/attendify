@@ -89,6 +89,7 @@ class ViewAttendance(QMainWindow):
         }
 
         self.df["attend_percent"] = counts
+        self.df["names"] = self.df["names"].str.replace("dataset/", "")
         df = self.df.loc[:, ["names", "attend_percent"]]
         df = df.rename(
             {"names": "Student Name", "attend_percent": "Attendance Percentage"}, axis=1

@@ -4,7 +4,7 @@ import os
 DATASET = "dataset"
 
 # face encoding and attendance output path
-ENCODINGS_PATH = "output/encodings2.pickle"
+ENCODINGS_PATH = "output/encodings.pickle"
 ATTENDANCE_PATH = "output/attendance.csv"
 
 # face detector model

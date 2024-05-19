@@ -44,9 +44,8 @@ class FaceEncoder:
                 self.KnowNames.append(name)
 
     def save_face_encodings(self):
-        # if there are registers faces
-        if os.path.exists(self.attendance) and os.path.exists(self.attendance):
-            # append new encodings to the existing one
+        if os.path.exists(self.encodings):
+            # Append new encodings to the existing one
             with open(self.encodings, "rb") as f:
                 print("[INFO] loading encodings...")
                 data = pickle.loads(f.read())
@@ -55,6 +54,16 @@ class FaceEncoder:
             with open(self.encodings, "wb") as f:
                 print("[INFO] serialize encodings to disk...")
                 f.write(pickle.dumps(data))
+        else:
+            # Create a new encodings file
+            print("[INFO] encoding file not found. Creating a new one...")
+            data = {"names": self.KnowNames, "encodings": self.knowEncodings}
+            with open(self.encodings, "wb") as f:
+                print("[INFO] serialize encodings to disk...")
+                f.write(pickle.dumps(data))
+        
+        # if there are registers faces
+        if os.path.exists(self.attendance):
 
             # append new dataframe to the existing one.
             df = pd.read_csv(self.attendance, index_col=0)
@@ -68,13 +77,6 @@ class FaceEncoder:
             print("[INFO] storing additional student names in a dataframe...")
             df.to_csv(self.attendance)
         else:
-            # serialize encodings to disk
-            print("[INFO] serialize encodings to disk...")
-            data = {"names": self.KnowNames, "encodings": self.knowEncodings}
-            f = open(self.encodings, "wb")
-            f.write(pickle.dumps(data))
-            f.close()
-
             # storing the names in dataframe
             print("[INFO] storing student names in a dataframe...")
             df = pd.DataFrame({"names": sorted(list(set(self.KnowNames)))})

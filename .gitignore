@@ -1,3 +1,4 @@
+*.pickle
 dataset/
 
 # Byte-compiled / optimized / DLL files

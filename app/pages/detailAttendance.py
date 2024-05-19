@@ -1,7 +1,7 @@
 import sys
 
 sys.path.append(".")
-sys.path.append("./App/utils")
+sys.path.append("app/utils")
 
 import config
 import numpy as np
