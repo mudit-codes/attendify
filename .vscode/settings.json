@@ -15,6 +15,7 @@
         "imutils",
         "imwrite",
         "ndarray",
+        "pdfkit",
         "prototxt",
         "protxt",
         "pyqt",
@@ -22,6 +23,7 @@
         "Qimage",
         "rollnumber",
         "rowspan",
-        "scalefactor"
+        "scalefactor",
+        "wkhtmltopdf"
     ]
 }

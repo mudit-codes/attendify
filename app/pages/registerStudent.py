@@ -181,7 +181,7 @@ class RegisterStudent(QMainWindow):
         if self.cameraOn:
             self.videoRecorder.camera.release()
             cv2.destroyAllWindows()
-        from view_attendance import ViewAttendance
+        from viewAttendance import ViewAttendance
 
         self.ViewAttendance = ViewAttendance()
         self.ViewAttendance.show()
