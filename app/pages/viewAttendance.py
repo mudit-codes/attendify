@@ -48,7 +48,6 @@ class ViewAttendance(QMainWindow):
             )
         else:
             name = self.searchText.text().replace(" ", "_")
-            name = "dataset/" + name
             self.df = self.df[self.df["names"] == name]
             if len(self.df) == 0:
                 self.showDialog(
