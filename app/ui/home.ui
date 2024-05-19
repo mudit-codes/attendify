@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>HomePage</class>
+    <widget class="QMainWindow" name="HomePage">
+        <property name="geometry">
+            <rect>
+                <x>100</x>
+                <y>100</y>
+                <width>1000</width>
+                <height>800</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Home</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout" name="verticalLayoutMain">
+                <!-- logo element -->
+                <item>
+                    <widget class="QLabel" name="imageLabel" alignment="Qt::AlignHCenter">
+                        <property name="pixmap">
+                            <pixmap>../assets/logo.png</pixmap>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="styleSheet">
+                            <string>
+                                QLabel {
+                                margin-top: 100px;
+                                }
+                            </string>
+                        </property>
+                    </widget>
+                </item>
+                <!-- heading element -->
+                <item>
+                    <widget class="QLabel" name="label" alignment="Qt::AlignCenter">
+                        <property name="text">
+                            <string>Attendify - The Classroom Attendance System</string>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="styleSheet">
+                            <string>
+                                QLabel {
+                                margin-top: 40px;
+                                font-size: 30px;
+                                font-weight: bold;
+                                font-family: Arial, sans-serif;
+                                }
+                            </string>
+                        </property>
+                    </widget>
+                </item>
+                <!-- attendance buttons -->
+                <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout">
+                        <item>
+                            <widget class="QPushButton" name="registerStudentBtn">
+                                <property name="text">
+                                    <string>Register Student</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QPushButton {
+                                        background-color: #4CAF50;
+                                        color: white;
+                                        border: none;
+                                        padding: 10px 20px;
+                                        text-align: center;
+                                        height: 100px;
+                                        text-decoration: none;
+                                        font-size: 18px;
+                                        margin: 25px 10px 100px 50px;
+                                        font-weight: bold;
+                                        font-family: Arial, sans-serif;
+                                        }
+                                        QPushButton:hover {
+                                        background-color: #45a049;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="takeAttendanceBtn">
+                                <property name="text">
+                                    <string>Take Attendance</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QPushButton {
+                                        background-color: #4CAF50;
+                                        color: white;
+                                        border: none;
+                                        padding: 10px 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        height: 100px;
+                                        font-size: 18px;
+                                        margin: 25px 0 100px 0;
+                                        font-weight: bold;
+                                        font-family: Arial, sans-serif;
+                                        }
+                                        QPushButton:hover {
+                                        background-color: #45a049;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="viewAttendanceBtn">
+                                <property name="text">
+                                    <string>View Attendance</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QPushButton {
+                                        background-color: #4CAF50;
+                                        color: white;
+                                        border: none;
+                                        padding: 10px 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        height: 100px;
+                                        font-size: 18px;
+                                        margin: 25px 50px 100px 10px;
+                                        font-weight: bold;
+                                        font-family: Arial, sans-serif;
+                                        }
+                                        QPushButton:hover {
+                                        background-color: #45a049;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QStatusBar" name="statusbar" />
+    </widget>
+    <resources />
+    <connections />
+</ui>
