@@ -11,42 +11,68 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox, QLineEdit
 
 
-class LoginPage(QMainWindow):
+class SignupPage(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        uic.loadUi("app/ui/login.ui", self)
-        self.loginBtn.clicked.connect(self.login)
+        uic.loadUi("app/ui/signup.ui", self)
         self.signupBtn.clicked.connect(self.signup)
+        self.backBtn.clicked.connect(self.back)
         self.passwordLineEdit.setEchoMode(QLineEdit.Password)
+        self.confirmPasswordLineEdit.setEchoMode(QLineEdit.Password)
 
-    def login(self):
+    def signup(self):
+        fullname = self.fullnameLineEdit.text()
         username = self.usernameLineEdit.text()
+        email = self.emailLineEdit.text()
         password = self.passwordLineEdit.text()
+        confirmPassword = self.confirmPasswordLineEdit.text()
 
-        if len(username) == 0 or len(password) == 0:
+        if (
+            len(fullname) == 0
+            or len(username) == 0
+            or len(email) == 0
+            or len(password) == 0
+            or len(confirmPassword) == 0
+        ):
             displayText = "Required fields cannot be empty."
+            self.showDialog(
+                icon=QMessageBox.Warning, displayText=displayText, windowTitle="Signup"
+            )
+        elif password != confirmPassword:
+            displayText = "Password mismatch"
             self.showDialog(
                 icon=QMessageBox.Warning, displayText=displayText, windowTitle="Signup"
             )
         else:
             try:
                 connection = sqlite3.connect("db/login.db")
-                results = connection.execute(
-                    "SELECT * FROM USERS WHERE USERNAME = ? AND PASSWORD = ?",
-                    (username, password),
-                )
-                if len(results.fetchall()) > 0:
+                try:
+                    connection.execute(
+                        "CREATE TABLE USERS (FULLNAME TEXT, USERNAME TEXT NOT NULL UNIQUE, EMAIL TEXT, PASSWORD TEXT NOT NULL)"
+                    )
+                except:
+                    pass
+
+                try:
+                    connection.execute(
+                        "INSERT INTO USERS VALUES (?, ?, ?, ?)",
+                        (fullname, username, email, password),
+                    )
+                    connection.commit()
+                    connection.close()
+
                     self.homePage = HomePage()
                     self.homePage.show()
                     self.close()
-                else:
-                    displayText = "Invalid username and password"
+                except:
+                    displayText = "Duplicated user, {} already registered".format(
+                        username
+                    )
                     self.showDialog(
                         icon=QMessageBox.Warning,
                         displayText=displayText,
                         windowTitle="Signup",
                     )
-                connection.close()
             except:
                 displayText = "Error connecting to database"
                 self.showDialog(
@@ -55,10 +81,10 @@ class LoginPage(QMainWindow):
                     windowTitle="Signup",
                 )
 
-    def signup(self):
-        from signup import SignupPage
-        self.signupPage = SignupPage()
-        self.signupPage.show()
+    def back(self):
+        from login import LoginPage
+        self.loginPage = LoginPage()
+        self.loginPage.show()
         self.close()
 
     def showDialog(self, icon, displayText, windowTitle):
@@ -72,6 +98,6 @@ class LoginPage(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = LoginPage()
+    window = SignupPage()
     window.show()
     sys.exit(app.exec())

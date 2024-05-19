@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>signupPage</class>
+    <widget class="QMainWindow" name="signupPage">
+        <property name="geometry">
+            <rect>
+                <x>100</x>
+                <y>100</y>
+                <width>1000</width>
+                <height>800</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Signup</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QGridLayout" name="gridLayout">
+                <!-- logo element -->
+                <item row="0" column="1" rowspan="2">
+                    <widget class="QLabel" name="imageLabel" alignment="Qt::AlignHCenter">
+                        <property name="pixmap">
+                            <pixmap>../assets/logo.png</pixmap>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="styleSheet">
+                            <string>
+                                QLabel {
+                                margin-top: 40px;
+                                }
+                            </string>
+                        </property>
+                    </widget>
+                </item>
+                <item row="2" column="1">
+                    <layout class="QFormLayout" name="formLayout">
+                        <!-- heading element -->
+                        <item row="0" column="0" colspan="2">
+                            <widget class="QLabel" name="loginFormLabel">
+                                <property name="text">
+                                    <string>Teacher's SignUp</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QLabel {
+                                        margin-top: 20px;
+                                        font-size: 40px;
+                                        font-weight: bold;
+                                        font-family: Arial, sans-serif;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <!-- field elements -->
+                        <item row="1" column="0">
+                            <widget class="QLabel" name="fullnameLabel">
+                                <property name="text">
+                                    <string>Full Name</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QLabel {
+                                        margin-top: 20px;
+                                        font-size: 18px;
+                                        font-family: Ariel, sans-serif;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="1" column="1">
+                            <widget class="QLineEdit" name="fullnameLineEdit">
+                                <property name="styleSheet">
+                                    <string>
+                                        QLineEdit {
+                                        margin-top: 20px;
+                                        font-size: 15px;
+                                        min-width: 400px;
+                                        max-width: 400px;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="2" column="0">
+                            <widget class="QLabel" name="usernameLabel">
+                                <property name="text">
+                                    <string>Username</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QLabel {
+                                        margin-top: 10px;
+                                        font-size: 18px;
+                                        font-family: Ariel, sans-serif;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="2" column="1">
+                            <widget class="QLineEdit" name="usernameLineEdit">
+                                <property name="styleSheet">
+                                    <string>
+                                        QLineEdit {
+                                        margin-top: 10px;
+                                        font-size: 15px;
+                                        min-width: 400px;
+                                        max-width: 400px;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="3" column="0">
+                            <widget class="QLabel" name="emailLabel">
+                                <property name="text">
+                                    <string>Email</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QLabel {
+                                        margin-top: 10px;
+                                        font-size: 18px;
+                                        font-family: Ariel, sans-serif;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="3" column="1">
+                            <widget class="QLineEdit" name="emailLineEdit">
+                                <property name="styleSheet">
+                                    <string>
+                                        QLineEdit {
+                                        margin-top: 10px;
+                                        font-size: 15px;
+                                        min-width: 400px;
+                                        max-width: 400px;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="4" column="0">
+                            <widget class="QLabel" name="passwordLabel">
+                                <property name="text">
+                                    <string>Password</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QLabel {
+                                        margin-top: 10px;
+                                        font-size: 18px;
+                                        font-family: Ariel, sans-serif;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="4" column="1">
+                            <widget class="QLineEdit" name="passwordLineEdit">
+                                <property name="styleSheet">
+                                    <string>
+                                        QLineEdit {
+                                        margin-top: 10px;
+                                        font-size: 15px;
+                                        min-width: 400px;
+                                        max-width: 400px;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="5" column="0">
+                            <widget class="QLabel" name="confirmPasswordLabel">
+                                <property name="text">
+                                    <string>Confirm Password</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QLabel {
+                                        margin-top: 10px;
+                                        font-size: 18px;
+                                        font-family: Ariel, sans-serif;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="5" column="1">
+                            <widget class="QLineEdit" name="confirmPasswordLineEdit">
+                                <property name="styleSheet">
+                                    <string>
+                                        QLineEdit {
+                                        margin-top: 10px;
+                                        font-size: 15px;
+                                        min-width: 400px;
+                                        max-width: 400px;
+                                        }
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item row="6" column="0" colspan="2">
+                            <layout class="QHBoxLayout" name="horizontalLayout">
+                                <item>
+                                    <widget class="QPushButton" name="signupBtn">
+                                        <property name="text">
+                                            <string>Sign Up</string>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string>
+                                                QPushButton {
+                                                background-color: #4CAF50;
+                                                color: white;
+                                                border: none;
+                                                padding: 10px 20px;
+                                                text-align: center;
+                                                text-decoration: none;
+                                                font-size: 18px;
+                                                margin: 25px 5px 0 5px;
+                                                font-weight: bold;
+                                                font-family: Arial, sans-serif;
+                                                }
+                                                QPushButton:hover {
+                                                background-color: #45a049;
+                                                }
+                                            </string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="backBtn">
+                                        <property name="text">
+                                            <string>Back</string>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string>
+                                                QPushButton {
+                                                background-color: #4CAF50;
+                                                color: white;
+                                                border: none;
+                                                padding: 10px 20px;
+                                                text-align: center;
+                                                text-decoration: none;
+                                                font-size: 18px;
+                                                margin: 25px 0 0 5px;
+                                                font-weight: bold;
+                                                font-family: Arial, sans-serif;
+                                                }
+                                                QPushButton:hover {
+                                                background-color: #45a049;
+                                                }
+                                            </string>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </item>
+                    </layout>
+                </item>
+                <item row="2" column="1">
+                    <spacer name="verticalSpacer_3">
+                        <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                            <size>
+                                <width>20</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </item>
+                <item row="3" column="0">
+                    <spacer name="horizontalSpacer">
+                        <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                            <size>
+                                <width>40</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </item>
+                <item row="3" column="2">
+                    <spacer name="horizontalSpacer_2">
+                        <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                            <size>
+                                <width>40</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QStatusBar" name="statusbar" />
+    </widget>
+    <resources />
+    <connections />
+</ui>

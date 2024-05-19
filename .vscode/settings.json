@@ -8,6 +8,7 @@
         "centralwidget",
         "pyqt",
         "qdarkstyle",
+        "rollnumber",
         "rowspan"
     ]
 }
