@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>EnrollStudent</class>
+    <widget class="QMainWindow" name="EnrollStudent">
+        <property name="geometry">
+            <rect>
+                <x>100</x>
+                <y>100</y>
+                <width>1000</width>
+                <height>800</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Register Student</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QGridLayout" name="gridLayout_3">
+                <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                    <widget class="QFrame" name="RegistrationPage">
+                        <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                        </property>
+                        <!-- Student Name Label -->
+                        <widget class="QLabel" name="label">
+                            <property name="geometry">
+                                <rect>
+                                    <x>40</x>
+                                    <y>25</y>
+                                    <width>150</width>
+                                    <height>25</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Student Name</string>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QLabel {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- Name Input Field -->
+                        <widget class="QLineEdit" name="nameLineEdit">
+                            <property name="geometry">
+                                <rect>
+                                    <x>160</x>
+                                    <y>20</y>
+                                    <width>290</width>
+                                    <height>35</height>
+                                </rect>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QLineEdit {
+                                    font-size: 18px;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- Roll Number Label -->
+                        <widget class="QLabel" name="label">
+                            <property name="geometry">
+                                <rect>
+                                    <x>500</x>
+                                    <y>25</y>
+                                    <width>150</width>
+                                    <height>25</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Roll Number</string>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QLabel {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- Roll Number Input Field -->
+                        <widget class="QLineEdit" name="rollNumberLineEdit">
+                            <property name="geometry">
+                                <rect>
+                                    <x>610</x>
+                                    <y>20</y>
+                                    <width>300</width>
+                                    <height>35</height>
+                                </rect>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QLineEdit {
+                                    font-size: 18px;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- Capture Image Button -->
+                        <widget class="QPushButton" name="takeImagesBtn">
+                            <property name="geometry">
+                                <rect>
+                                    <x>50</x>
+                                    <y>70</y>
+                                    <width>400</width>
+                                    <height>35</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Capture Images</string>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QPushButton {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 20px;
+                                    text-decoration: none;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                    }
+                                    QPushButton:hover {
+                                    background-color: #45a049;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- Upload Image Buttton -->
+                        <widget class="QPushButton" name="uploadImagesBtn">
+                            <property name="geometry">
+                                <rect>
+                                    <x>510</x>
+                                    <y>70</y>
+                                    <width>400</width>
+                                    <height>35</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Upload Images</string>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QPushButton {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 20px;
+                                    text-decoration: none;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                    }
+                                    QPushButton:hover {
+                                    background-color: #45a049;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- Video Frame -->
+                        <widget class="QFrame" name="videoFrame">
+                            <property name="geometry">
+                                <rect>
+                                    <x>50</x>
+                                    <y>120</y>
+                                    <width>860</width>
+                                    <height>550</height>
+                                </rect>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>490</width>
+                                    <height>350</height>
+                                </size>
+                            </property>
+                            <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QGridLayout" name="gridLayout_2">
+                                <item row="1" column="0">
+                                    <widget class="QPushButton" name="captureBtn">
+                                        <property name="text">
+                                            <string>Capture</string>
+                                        </property>
+                                        <property name="shortcut">
+                                            <string>Return</string>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string>
+                                                QPushButton {
+                                                background-color: grey;
+                                                color: white;
+                                                border: none;
+                                                padding: 10px 10px;
+                                                text-decoration: none;
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                font-family: Arial, sans-serif;
+                                                }
+                                            </string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item row="1" column="1">
+                                    <widget class="QPushButton" name="quitBtn">
+                                        <property name="text">
+                                            <string>Quit</string>
+                                        </property>
+                                        <property name="shortcut">
+                                            <string>Q</string>
+                                        </property>
+                                        <property name="styleSheet">
+                                            <string>
+                                                QPushButton {
+                                                background-color: grey;
+                                                color: white;
+                                                border: none;
+                                                padding: 10px 10px;
+                                                text-decoration: none;
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                font-family: Arial, sans-serif;
+                                                }
+                                            </string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item row="0" column="0" colspan="2">
+                                    <widget class="QLabel" name="videoLabel">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>461</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="baseSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string />
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <!-- Register Label -->
+                        <widget class="QLabel" name="registerLabel">
+                            <property name="geometry">
+                                <rect>
+                                    <x>750</x>
+                                    <y>400</y>
+                                    <width>250</width>
+                                    <height>30</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>
+                                    &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span
+                                    style=&quot; font-size:20pt;
+                                    font-weight:600;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                            </property>
+                        </widget>
+                        <!-- Register Button -->
+                        <widget class="QPushButton" name="registerBtn">
+                            <property name="geometry">
+                                <rect>
+                                    <x>50</x>
+                                    <y>690</y>
+                                    <width>250</width>
+                                    <height>50</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Register</string>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QPushButton {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 20px;
+                                    text-decoration: none;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                    }
+                                    QPushButton:hover {
+                                    background-color: #45a049;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- View Attendance Button -->
+                        <widget class="QPushButton" name="viewAttendanceBtn">
+                            <property name="geometry">
+                                <rect>
+                                    <x>320</x>
+                                    <y>690</y>
+                                    <width>250</width>
+                                    <height>50</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>View Attendance</string>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QPushButton {
+                                    background-color: dodgerblue;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 20px;
+                                    text-decoration: none;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                    }
+                                    QPushButton:hover {
+                                    background-color: light-blue;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                        <!-- Back Button -->
+                        <widget class="QPushButton" name="backBtn">
+                            <property name="geometry">
+                                <rect>
+                                    <x>750</x>
+                                    <y>690</y>
+                                    <width>150</width>
+                                    <height>50</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Back</string>
+                            </property>
+                            <property name="shortcut">
+                                <string>Backspace</string>
+                            </property>
+                            <property name="styleSheet">
+                                <string>
+                                    QPushButton {
+                                    background-color: grey;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 20px;
+                                    text-decoration: none;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                    }
+                                    QPushButton:hover {
+                                    background-color: dark-grey;
+                                    }
+                                </string>
+                            </property>
+                        </widget>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QMenuBar" name="menubar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>829</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QStatusBar" name="statusbar" />
+    </widget>
+    <resources />
+    <connections />
+</ui>

@@ -4,11 +4,24 @@
         "./app/utils"
     ],
     "cSpell.words": [
+        "astype",
         "attendify",
+        "caffemodel",
         "centralwidget",
+        "colspan",
+        "Dataframe",
+        "fillna",
+        "imshow",
+        "imutils",
+        "imwrite",
+        "ndarray",
+        "prototxt",
+        "protxt",
         "pyqt",
         "qdarkstyle",
+        "Qimage",
         "rollnumber",
-        "rowspan"
+        "rowspan",
+        "scalefactor"
     ]
 }

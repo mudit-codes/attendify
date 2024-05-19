@@ -13,16 +13,16 @@ class HomePage(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         uic.loadUi("app/ui/home.ui", self)
-    #     self.registerStudentBtn.clicked.connect(self.registerStudent)
+        self.registerStudentBtn.clicked.connect(self.registerStudent)
     #     self.takeAttendanceBtn.clicked.connect(self.takeAttendance)
     #     self.viewAttendanceBtn.clicked.connect(self.viewAttendance)
 
-    # def registerStudent(self):
-    #     from register_student import RegisterStudent
+    def registerStudent(self):
+        from registerStudent import RegisterStudent
 
-    #     self.registerStudent = RegisterStudent()
-    #     self.registerStudent.show()
-    #     self.close()
+        self.registerStudent = RegisterStudent()
+        self.registerStudent.show()
+        self.close()
 
     # def takeAttendance(self):
     #     from take_attendance import TakeAttendance
