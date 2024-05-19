@@ -100,9 +100,9 @@ class ViewAttendance(QMainWindow):
         self.table.horizontalHeader().setStretchLastSection(True)
 
         for i, row in enumerate(df.values):
-            if counts[i] >= 90:
+            if counts[i] >= 80:
                 color = colorMap["Good"]
-            elif counts[i] >= 80:
+            elif counts[i] >= 60:
                 color = colorMap["Warning"]
             else:
                 color = colorMap["Danger"]
@@ -116,7 +116,7 @@ class ViewAttendance(QMainWindow):
         self.table.clicked.connect(self.detailAttendance)
 
     def detailAttendance(self):
-        from detail_attendance import DetailAttendance
+        from detailAttendance import DetailAttendance
 
         self.detailAttendancePage = DetailAttendance(self.df, self.table.currentRow())
         self.detailAttendancePage.show()
