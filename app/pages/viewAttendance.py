@@ -46,16 +46,9 @@ class ViewAttendance(QMainWindow):
                 displayText="Enter student fullname",
                 windowTitle="Search Name",
             )
-        elif self.rollNumberLineEdit.text() == "":
-            self.showDialog(
-                icon=QMessageBox.Warning,
-                displayText="Enter Student Roll Number",
-                windowTitle="Roll Number",
-            )
         else:
             name = self.searchText.text().replace(" ", "_")
             name = "dataset/" + name
-            name = name.lower()
             self.df = self.df[self.df["names"] == name]
             if len(self.df) == 0:
                 self.showDialog(
@@ -156,8 +149,8 @@ class ViewAttendance(QMainWindow):
             htmlContent = df.to_html()
 
             # Convert HTML to PDF
-            config = pdfkit.configuration(wkhtmltopdf=config.PDF_PATH)
-            pdfkit.from_string(htmlContent, pdfFilePath, configuration=config)
+            configuration = pdfkit.configuration(wkhtmltopdf=config.PDF_PATH)
+            pdfkit.from_string(htmlContent, pdfFilePath, configuration=configuration)
             print(f"PDF successfully created at {pdfFilePath}")
 
         except Exception as e:

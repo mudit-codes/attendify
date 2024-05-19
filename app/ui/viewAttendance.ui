@@ -99,6 +99,23 @@
                                 <property name="text">
                                     <string>Save as PDF</string>
                                 </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QPushButton {
+                                        background-color: dodgerblue;
+                                        color: white;
+                                        border: none;
+                                        padding: 10px 20px;
+                                        text-decoration: none;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        font-family: Arial, sans-serif;
+                                        }
+                                        QPushButton:hover {
+                                        background-color: light-blue;
+                                        }
+                                    </string>
+                                </property>
                             </widget>
                         </item>
                         <item>
@@ -108,6 +125,23 @@
                                 </property>
                                 <property name="shortcut">
                                     <string>Backspace</string>
+                                </property>
+                                <property name="styleSheet">
+                                    <string>
+                                        QPushButton {
+                                        background-color: grey;
+                                        color: white;
+                                        border: none;
+                                        padding: 10px 20px;
+                                        text-decoration: none;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        font-family: Arial, sans-serif;
+                                        }
+                                        QPushButton:hover {
+                                        background-color: dark-grey;
+                                        }
+                                    </string>
                                 </property>
                             </widget>
                         </item>

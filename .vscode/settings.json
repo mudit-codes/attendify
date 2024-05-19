@@ -4,6 +4,9 @@
         "./app/utils"
     ],
     "cSpell.words": [
+        "arange",
+        "arctan",
+        "argmax",
         "astype",
         "attendify",
         "caffemodel",
@@ -11,6 +14,9 @@
         "colspan",
         "Dataframe",
         "fillna",
+        "fourcc",
+        "Idxs",
+        "iloc",
         "imshow",
         "imutils",
         "imwrite",
@@ -24,6 +30,7 @@
         "rollnumber",
         "rowspan",
         "scalefactor",
-        "wkhtmltopdf"
+        "wkhtmltopdf",
+        "XVID"
     ]
 }
