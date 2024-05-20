@@ -1,6 +1,7 @@
 *.pickle
 dataset/
-output
+output/
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
