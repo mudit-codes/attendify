@@ -15,11 +15,40 @@
         </property>
         <widget class="QWidget" name="centralwidget">
             <layout class="QVBoxLayout" name="verticalLayoutMain">
+                <!-- Logout Button -->
+                <item>
+                    <widget class="QPushButton" name="logoutBtn">
+                        <property name="text">
+                            <string>Logout</string>
+                        </property>
+                        <property name="styleSheet">
+                            <string>
+                                QPushButton {
+                                background-color: #E72929;
+                                color: white;
+                                border: none;
+                                right: 0;
+                                padding: 10px 10px;
+                                text-align: center;
+                                text-decoration: none;
+                                max-width: 30px;
+                                font-size: 15px;
+                                margin: 25px;
+                                font-weight: bold;
+                                font-family: Arial, sans-serif;
+                                }
+                                QPushButton:hover {
+                                background-color: #FF0000;
+                                }
+                            </string>
+                        </property>
+                    </widget>
+                </item>
                 <!-- logo element -->
                 <item>
                     <widget class="QLabel" name="imageLabel" alignment="Qt::AlignHCenter">
                         <property name="pixmap">
-                            <pixmap>../assets/logo.png</pixmap>
+                            <pixmap>../assets/attendifyMain</pixmap>
                         </property>
                         <property name="alignment">
                             <set>Qt::AlignCenter</set>
@@ -27,7 +56,7 @@
                         <property name="styleSheet">
                             <string>
                                 QLabel {
-                                margin-top: 100px;
+                                margin-top: 20px;
                                 }
                             </string>
                         </property>
@@ -37,7 +66,7 @@
                 <item>
                     <widget class="QLabel" name="label" alignment="Qt::AlignCenter">
                         <property name="text">
-                            <string>Attendify - The Classroom Attendance System</string>
+                            <string>Automated Attendance System</string>
                         </property>
                         <property name="alignment">
                             <set>Qt::AlignCenter</set>
@@ -45,7 +74,7 @@
                         <property name="styleSheet">
                             <string>
                                 QLabel {
-                                margin-top: 40px;
+                                margin-top: 20px;
                                 font-size: 30px;
                                 font-weight: bold;
                                 font-family: Arial, sans-serif;

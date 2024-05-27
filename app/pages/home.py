@@ -16,6 +16,7 @@ class HomePage(QMainWindow):
         self.registerStudentBtn.clicked.connect(self.registerStudent)
         self.takeAttendanceBtn.clicked.connect(self.takeAttendance)
         self.viewAttendanceBtn.clicked.connect(self.viewAttendance)
+        self.logoutBtn.clicked.connect(self.logout)
 
     def registerStudent(self):
         from registerStudent import RegisterStudent
@@ -36,6 +37,13 @@ class HomePage(QMainWindow):
 
         self.viewAttendance = ViewAttendance()
         self.viewAttendance.show()
+        self.close()
+        
+    def logout(self):
+        from login import LoginPage
+
+        self.login = LoginPage()
+        self.login.show()
         self.close()
 
 

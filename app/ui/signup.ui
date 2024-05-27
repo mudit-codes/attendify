@@ -19,7 +19,7 @@
                 <item row="0" column="1" rowspan="2">
                     <widget class="QLabel" name="imageLabel" alignment="Qt::AlignHCenter">
                         <property name="pixmap">
-                            <pixmap>../assets/logo.png</pixmap>
+                            <pixmap>../assets/attendifyMain.png</pixmap>
                         </property>
                         <property name="alignment">
                             <set>Qt::AlignCenter</set>
@@ -39,7 +39,7 @@
                         <item row="0" column="0" colspan="2">
                             <widget class="QLabel" name="loginFormLabel">
                                 <property name="text">
-                                    <string>Teacher's SignUp</string>
+                                    <string>Signup</string>
                                 </property>
                                 <property name="alignment">
                                     <set>Qt::AlignCenter</set>
@@ -47,8 +47,8 @@
                                 <property name="styleSheet">
                                     <string>
                                         QLabel {
-                                        margin-top: 20px;
-                                        font-size: 40px;
+                                        margin-top: 30px;
+                                        font-size: 30px;
                                         font-weight: bold;
                                         font-family: Arial, sans-serif;
                                         }
