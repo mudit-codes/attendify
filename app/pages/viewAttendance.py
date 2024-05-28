@@ -1,6 +1,7 @@
 import os
 import sys
 import pdfkit
+import shutil
 
 sys.path.append(".")
 sys.path.append("app/utils")
@@ -125,10 +126,10 @@ class ViewAttendance(QMainWindow):
 
     def saveAsPdf(self):
         try:
-            # Read and process the CSV file
-            df = pd.read_csv(self.attendance, index_col=0)
-            df = df.replace({0: "absent", 1: "present", None: "excused"})
-            df = df.rename({"names": "Student Name"}, axis=1)
+            sourceFilePath = os.path.join("output", "attendance.csv")
+            if not os.path.exists(sourceFilePath):
+                print("Source CSV file does not exist.")
+                return
 
             # Get output directory from file dialog
             dlg = QFileDialog(self)
@@ -141,18 +142,13 @@ class ViewAttendance(QMainWindow):
 
             now = pd.Timestamp.now()
 
-            # Construct file names and paths
-            baseFilename = f"attendance_{now.strftime('%Y-%m-%d_%H-%M-%S')}"
-            pdfFilename = baseFilename + ".pdf"
-            pdfFilePath = os.path.join(outputPath, pdfFilename)
+            # Construct file name and path
+            baseFilename = f"attendance_{now.strftime('%Y-%m-%d_%H-%M-%S')}.csv"
+            destFilePath = os.path.join(outputPath, baseFilename)
 
-            # Save DataFrame to HTML
-            htmlContent = df.to_html()
-
-            # Convert HTML to PDF
-            configuration = pdfkit.configuration(wkhtmltopdf=config.PDF_PATH)
-            pdfkit.from_string(htmlContent, pdfFilePath, configuration=configuration)
-            print(f"PDF successfully created at {pdfFilePath}")
+            # Copy CSV file to the selected directory
+            shutil.copy(sourceFilePath, destFilePath)
+            print(f"CSV successfully copied to {destFilePath}")
 
         except Exception as e:
             print(f"An error occurred: {e}")

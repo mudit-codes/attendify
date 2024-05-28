@@ -64,7 +64,6 @@ class FaceEncoder:
         
         # if there are registers faces
         if os.path.exists(self.attendance):
-
             # append new dataframe to the existing one.
             df = pd.read_csv(self.attendance, index_col=0)
             new_df = pd.DataFrame(columns=df.columns)
@@ -74,6 +73,11 @@ class FaceEncoder:
             df = df.append(new_df)
             df = df.sort_values(by="names")
             df = df.reset_index(drop=True)
+            unnamed_columns = df.columns[df.columns.str.contains('^Unnamed')]
+            df[unnamed_columns] = ""
+            
+            # Remove column names for 'Unnamed' columns
+            df.rename(columns={col: "" for col in unnamed_columns}, inplace=True)
             print("[INFO] storing additional student names in a dataframe...")
             df.to_csv(self.attendance)
         else:

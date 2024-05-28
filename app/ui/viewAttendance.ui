@@ -97,7 +97,7 @@
                         <item>
                             <widget class="QPushButton" name="saveAsPdfBtn">
                                 <property name="text">
-                                    <string>Save as PDF</string>
+                                    <string>Download Attendance</string>
                                 </property>
                                 <property name="styleSheet">
                                     <string>

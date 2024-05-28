@@ -53,6 +53,7 @@ class FaceRecognizerWidget(QWidget):
         self.faceCounter = {
             key: 1 if value >= 50 else 0 for (key, value) in self.faceCounter.items()
         }
+        self.df = self.df.loc[:, ~self.df.columns.str.contains('^Unnamed')]
         date_col = datetime.now().strftime("%A, %b %d, %Y %H:%M")
         self.df[date_col] = self.df["names"].map(lambda name: self.faceCounter[name])
         self.df.to_csv(self.attendance)

@@ -34,7 +34,7 @@ class TakeAttendance(QMainWindow):
 
         self.timer = QTimer()
         self.timer.setInterval(config.CAPTURE_DURATION)
-        self.timer.timeout.connect(self.quit)
+        self.timer.timeout.connect(self.stopRecording)
 
         self.cameraOn = False
 
@@ -65,16 +65,21 @@ class TakeAttendance(QMainWindow):
         videoPath, _ = dlg.getOpenFileName(self)
         self.takeAttendance(videoPath)
 
+    def stopRecording(self):
+        self.timer.stop()
+        self.quit()
+
     def quit(self):
-        self.closeCamera()
-        self.faceRecognizerWidget.saveDataframe()
-        self.videoLabel.hide()
-        displayText = self.constructDisplayText()
-        displayLabel = QLabel(displayText)
-        frameLayout = self.videoFrame.layout()
-        frameLayout.replaceWidget(self.videoLabel, displayLabel)
-        self.videoLabel.show()
-        self.quitBtn.close()
+        if self.cameraOn:
+            self.closeCamera()
+            self.faceRecognizerWidget.saveDataframe()
+            self.videoLabel.hide()
+            displayText = self.constructDisplayText()
+            displayLabel = QLabel(displayText)
+            frameLayout = self.videoFrame.layout()
+            frameLayout.replaceWidget(self.videoLabel, displayLabel)
+            self.videoLabel.show()
+            self.quitBtn.close()
 
     def back(self):
         if self.cameraOn:
@@ -86,8 +91,6 @@ class TakeAttendance(QMainWindow):
         self.close()
 
     def viewAttendance(self):
-        if self.cameraOn:
-            self.closeCamera()
         from viewAttendance import ViewAttendance
 
         self.ViewAttendance = ViewAttendance()
