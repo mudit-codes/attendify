@@ -13,4 +13,4 @@ MODEL_PATH = "model/res10_300x300_ssd_iter_140000.caffemodel"
 
 # capture duration
 # 5 * 60 * 1000 = 300000ms or 5 minutes
-CAPTURE_DURATION = 30000
+CAPTURE_DURATION = 90000
